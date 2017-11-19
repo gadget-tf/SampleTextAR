@@ -1,1 +1,1 @@
-# SampleTextAR
+# ARObjectSample

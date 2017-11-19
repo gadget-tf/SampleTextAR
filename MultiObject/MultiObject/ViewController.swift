@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TextAR
+//  MultiObject
 //
 //  Created by gadget-tf on 2017/11/19.
 //  Copyright © 2017年 gadget-tf. All rights reserved.
@@ -29,15 +29,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a new scene
         let scene = SCNScene()
         
-        // 表示する文字列の設定
-        let textGeometry = SCNText(string: "Hello Swift", extrusionDepth: 1.0)
-        textGeometry.firstMaterial?.diffuse.contents = UIColor.orange
+        let box = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0)
+        let material = SCNMaterial()
+        //material.diffuse.contents = UIColor.blue
+        material.diffuse.contents = UIImage(named: "brick.jpg")
         
-        let textNode = SCNNode(geometry: textGeometry)
-        textNode.position = SCNVector3(0, 0.1, -0.6)
-        textNode.scale = SCNVector3(0.02, 0.02, 0.02)
+        let node = SCNNode()
+        node.geometry = box
+        node.geometry?.materials = [material]
+        node.position = SCNVector3(0, 0.2, -0.5)
         
-        scene.rootNode.addChildNode(textNode)
+        let sphere = SCNSphere(radius: 0.2)
+        let sphereMaterial = SCNMaterial()
+        //sphereMaterial.diffuse.contents = UIColor.green
+        sphereMaterial.diffuse.contents = UIImage(named: "earthmap.jpeg")
+        
+        let sphereNode = SCNNode()
+        sphereNode.geometry = sphere
+        sphereNode.geometry?.materials = [sphereMaterial]
+        sphereNode.position = SCNVector3(0.4, 0.1, -1)
+        
+        scene.rootNode.addChildNode(node)
+        scene.rootNode.addChildNode(sphereNode)
         
         // Set the scene to the view
         sceneView.scene = scene

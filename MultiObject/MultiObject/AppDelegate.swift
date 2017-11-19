@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  TextAR
+//  MultiObject
 //
 //  Created by gadget-tf on 2017/11/19.
 //  Copyright © 2017年 gadget-tf. All rights reserved.

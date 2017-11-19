@@ -1,15 +1,15 @@
 //
-//  TextARTests.swift
-//  TextARTests
+//  MultiObjectTests.swift
+//  MultiObjectTests
 //
 //  Created by gadget-tf on 2017/11/19.
 //  Copyright © 2017年 gadget-tf. All rights reserved.
 //
 
 import XCTest
-@testable import TextAR
+@testable import MultiObject
 
-class TextARTests: XCTestCase {
+class MultiObjectTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

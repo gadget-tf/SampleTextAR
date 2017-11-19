@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TextAR.xcodeproj">
+      location = "self:MultiObject.xcodeproj">
    </FileRef>
 </Workspace>
